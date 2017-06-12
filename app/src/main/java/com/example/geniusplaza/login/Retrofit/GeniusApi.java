@@ -19,4 +19,8 @@ public interface GeniusApi {
     @POST("o/token/")
     Call<AuthToken> postCredentials(@Header("Authorization") String authorization, @Query("username") String username, @Query("password") String password, @Field("grant_type") String grantType);
 
+    @FormUrlEncoded
+    @POST("o/token/")
+    Call<AuthToken> postRefreshToken(@Header("Authorization") String authorization, @Query("refresh_token") String refreshToken, @Field("grant_type") String grantType);
+
 }
