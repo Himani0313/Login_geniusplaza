@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //
 //        }.start();
+        
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
